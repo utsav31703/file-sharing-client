@@ -10,7 +10,7 @@ function App() {
     const formData = new FormData();
     formData.append('file', file);
 
-    axios.post('http://localhost:5000/upload', formData, {
+    axios.post('https://file-sharing-server-rwc5.onrender.com/upload', formData, {
       onUploadProgress: (e) => {
         const percent = Math.round((e.loaded * 100) / e.total);
         setProgress(percent);
